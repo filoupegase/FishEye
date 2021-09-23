@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Corentin Loison">
+    <meta name="description" content="Une description">
+    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <link rel="stylesheet" type="text/css" href="./assets/css/minifiedMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
+    
+    <script type="module" src="../js/photographerPage.js"></script>
+
+    <title>FishEye - Photographer</title>
+</head>
+
+<body>
+    <header>
+        <a href="http://localhost:63342/FishEye/public/index.html"> <img class="logo" src="./assets/img/logo.svg" alt="Logo Fisheye - Lien vers la page d'accueil" tabindex="0"></a>
+    </header>
+    <main id="photograph" aria-hidden="false">
+        <section id="photographerInfo" class="card">
+        </section>
+        <button id="contact" tabindex="0">Contactez-moi</button>
+        <div id="sortByContainer">
+            <label for="sortBy">Trier par</label>
+            <div class="custom-select">
+                <select name="sortBy" id="sortBy">
+                    <option value="">select</option>
+                    <option value="popularity">Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="title">Titre</option>
+                </select>
+            </div>
+        </div>
+        <section id="mediaContainer" class="mediaContainer">
+        </section>
+        <aside tabindex="0" aria-label="Tarif de l'artiste">
+        </aside>
+    </main>
+    <div id = "formModal" class="form-modal" role="dialog" aria-hidden="true" aria-labelledby="contactArtist" tabindex="-1">
+        <div class="modalContainer" role="form" aria-labelledby="contactArtist">
+            <i id="closeModal" class="fas fa-times" role="button" aria-label="close contact form" tabindex="0"></i>
+            
+            <h3 id="contactArtist">Contactez moi</h3>
+            <form method="post">
+                <div id="errorContainer" aria-hidden="true" aria-label="liste des erreurs lors de la soumission du formulaire">
+                    <p>Formulaire non valide<br>Liste des erreurs:</p>
+                        <ul></ul>
+                </div>
+                <label for="firstname">Prénom </label>
+                <input type="text" name="firstname" id="firstname" required aria-required=true>
+
+                <label for="lastname">Nom </label>
+                <input type="text" name="lastname" id="lastname" required aria-required=true>
+
+                <label for="email">Email </label>
+                <input type="email" name="email" id="email" required aria-required=true>
+
+                <label for="message">Votre message</label>
+                <textarea rows="5" name="message" id="message" required aria-required=true></textarea>
+                <input id="submit" class="button" type="submit" aria-label="Send" value="Envoyer">
+            </form>
+        </div>
+    </div>
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="image closeup view" aria-hidden="true">
+        <div class="container" tabindex="0"> 
+            <i id="previousMedia" class="fas fa-chevron-left" tabindex="0" role="button" aria-label="previous image"></i>
+            <div id="lightBoxMedia">
+            </div>
+            <i id="nextMedia" class="fas fa-chevron-right" tabindex="0" role="button" aria-label="next image"></i>
+            <i id="closeLightbox" class="fas fa-times" tabindex="0" role="button" aria-label="close dialog"></i>
+        </div>
+    </div>
+</body>
+</html>

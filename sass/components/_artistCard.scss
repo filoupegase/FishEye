@@ -1,0 +1,73 @@
+.cardsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap : wrap;
+    margin-top:50px;
+}
+
+.artistDescription{
+    max-width:526px;
+    max-height:358px;
+    text-align: center;
+    
+    .artist{
+        color:$primaryFont;
+        font-size: 2.25rem;
+    }
+    .localisation{
+        color:$secondaryFont;
+        font-size: 0.81rem;
+    }
+    .slogan{
+        font-size:0.63rem;
+    }
+    .price{
+        color:$lightWriting;
+        font-size: 0.56rem;
+    }
+}
+
+.card{
+    margin: 10px;
+    cursor:pointer;
+}
+.avatar{
+    width : 200px;
+    height:200px;
+    object-fit: cover;
+    border-radius:50%;
+    //TODO missing blur border avatar
+}
+
+/*---------------second page------------*/
+#photograph{
+    .avatar{
+        max-width : 100px;
+        max-height:100px;
+        @include desktop{
+            max-width : 200px;
+            max-height:200px;  
+        }
+        align-self: center;
+    }
+    .artistDescription{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align:left;
+        justify-content : space-between;
+        max-width : 300px;
+    }
+    .card{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content : flex-end;
+         @include desktop{
+             justify-content: space-between;
+         }
+    }
+    .tags{
+        flex-wrap:wrap;
+        justify-content:flex-start;
+    }
+}
