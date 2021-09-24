@@ -73,7 +73,7 @@ mediaLibrary.photographerAllMedia(photographerId).then(mediaList => {
   newCustomSelect.addEventListener('change', sortSelect);
 
   function sortSelect() {
-    if (originalSelect.value != value) {
+    if (originalSelect.value !== value) {
       value = originalSelect.value;
       switch (value) {
         case 'popularity': {
