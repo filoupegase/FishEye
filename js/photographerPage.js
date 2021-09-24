@@ -174,18 +174,16 @@ function formModalDisplay() {
     formModal.style.display = 'block';
     main.setAttribute('aria-hidden', true);
     formModal.setAttribute('aria-hidden', false);
-    document.getElementById('firstname').focus();
   });
   close('closeModal', formModal);
 }
 
 const form = document.getElementsByTagName('form')[0];
 form.onsubmit = () => {
-  let firstname = document.getElementById('firstname').value;
   let lastname = document.getElementById('lastname').value;
   let email = document.getElementById('email').value;
   let msg = document.getElementById('message').value;
-  formValid.validation(firstname, lastname, email, msg);
+  formValid.validation(lastname, email, msg);
 
   return false; //avoid page redirection
 };

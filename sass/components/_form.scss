@@ -1,66 +1,69 @@
-.form-modal{
+.form-modal {
+  display: none;
+  background: $secondaryBackground;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+  @include desktop {
+    background: rgba(196, 196, 196, 0.4);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .modalContainer {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    @include desktop {
+      padding: 25px;
+      background: $secondaryBackground;
+      max-height: 730px;
+      max-width: 491px;
+      height: calc(100vh - 75px);
+      overflow-y: scroll;
+      margin: 75px auto;
+    }
+  }
+
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  h3, form {
+    max-width: 800px;
+  }
+
+  h3 {
+    font-size: 2.25rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+
+  input, textarea, #errorContainer {
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1.5rem;
+  }
+
+  #errorContainer {
     display: none;
-    background : $secondaryBackground;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    overflow-y: scroll;
-    @include desktop{
-        background: rgba(196, 196, 196, 0.4);
-        height: 100vh;
-        width: 100vw;
-    }
-    .modalContainer{
-        width : 100vw;
-        height : 100vh;
-        @include desktop{
-            background : $secondaryBackground;
-            width : 70%;
-            height : calc(100vh - 75px);
-            overflow-y: scroll;
-            margin:75px auto;
-        }
-    }
-    h3, form{
-        max-width:800px;
-        width:90%;
-        padding:25px 0 0 25px;
-    }
-    h3{
-        font-size: 2.25rem;
-    }
-    form{
-        display:flex;
-        flex-direction: column;
-        font-size : 1.5rem;
-        @include desktop{
-           max-width : 80%;
-           margin:auto;
-        }
-    }
-    input, textarea, #errorContainer{
-        border:none;
-        border-radius : 5px;
-        margin: 10px 0;
-        padding: 15px;
-        font-size : 1.5rem;
-    }
-    #errorContainer{
-        display : none;
-        background-color: white;
-        color: red;
-    }
-    .fa-times{
-        padding:30px;
-        font-size:2.25rem;
-        position : absolute;
-        left : calc(90% - 52px);
-        color : white;
-        @include desktop{
-            top : 75px;
-            left:unset;
-            right : 15%;
-        }
-    }
+    background-color: white;
+    color: red;
+  }
+
+  .fa-times {
+    font-size: 2.25rem;
+    left: calc(90% - 52px);
+    color: white;
+  }
 }   

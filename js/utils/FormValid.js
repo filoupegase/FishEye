@@ -3,13 +3,9 @@ export default class FormValid {
     this.errorTab = []
   }
 
-  validation(firstname, lastname, email, msg) {
+  validation(lastname, email, msg) {
     let namePattern = /^\p{Letter}{2,}((\s|-)*\p{Letter}*)*$/u
     let emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-    if (namePattern.test(firstname) === false) {
-      this.errorTab.push('Le prénom doit contenir au moins 2 lettres et aucun chiffre')
-    }
 
     if (namePattern.test(lastname) === false) {
       this.errorTab.push('Le nom doit contenir au moins 2 lettres et aucun chiffre')
@@ -19,8 +15,7 @@ export default class FormValid {
       this.errorTab.push('Format d\'email invalide')
     }
 
-
-    const errorContainer = document.getElementById('errorContainer')
+    const errorContainer = document.getElementById('errorContainer');
     const errorList = errorContainer.getElementsByTagName('ul')[0]
 
     if (this.errorTab.length > 0) {
@@ -35,7 +30,7 @@ export default class FormValid {
       errorList.innerHTML = ''
       errorContainer.style.display = "none"
       errorContainer.setAttribute('aria-hidden', true)
-      console.log(firstname, lastname, email, msg)
+      console.log(lastname, email, msg)
     }
   }
 }
