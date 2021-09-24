@@ -1,41 +1,58 @@
-.mediaContainer{
-    margin-top:50px;
+.mediaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 22px;
+    grid-row-gap: 19px;
+  }
+  @include desktop {
+    //justify-content: space-between;
+  }
+  @include wide-desktop {
+    //max-width: 1350px;
+    //margin: 50px auto 0 auto
+  }
+
+  .media {
+    //max-height: 230px;
+  }
+
+  img, video {
+    width: 350px;
+    max-width: 100%;
+    height: 250px;
+    @include mini-mobile {
+      width: 300px;
+      max-width: 100%;
+      height: 250px;
+    }
+    @include desktop {
+      height: 300px;
+      width: 350px;
+    }
+    object-fit: cover;
+    border-radius: 5px;
+    grid-column: 1/span 2;
+    cursor: pointer;
+  }
+
+  figcaption {
     display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    @include desktop{
-        justify-content: space-between;
-    }
-    @include wide-desktop{
-        max-width: 1350px;
-        margin: 50px auto 0 auto
-    }
-    .media{
-        margin: 10px 10px;
-        max-width:335px;
-    }
-    img, video{
-        width:100%;
-        height:190px;
-        @include desktop{
-            height:300px;
-            width:350px;  
-        }
-        object-fit: cover;
-        border-radius:5px;
-    }    
-    figcaption{
-        display:flex;
-        justify-content: space-between;
-    }
-    h2, p{
-        font-size:0.88rem;
-        color: $secondaryFont;
-    }
-    p::after{
-        content: " \f004";
-        font-family: "Font Awesome 5 Free";
-        font-weight: bold;
-    }
+    justify-content: space-between;
+  }
+
+  h2, p {
+    font-size: 0.88rem;
+    color: $secondaryFont;
+  }
+
+  p::after {
+    content: " \f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+  }
 }

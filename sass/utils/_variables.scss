@@ -1,18 +1,20 @@
-//Variable
-$primaryBackground : #901C1C;
-$primaryFont : #D3573C;
+//Variables
+$primaryBackground: #901C1C;
+$primaryFont: #D3573C;
 
-$secondaryBackground : $primaryFont;
-$secondaryFont : $primaryBackground;
+$secondaryBackground: $primaryFont;
+$secondaryFont: $primaryBackground;
 
-$lightTextFont : #525252;
-$lightTextBackground : #FAFAFA;
+$lightTextFont: #525252;
+$lightTextBackground: #FAFAFA;
 
-$lightWriting : #757575;
+$lightWriting: #a4a1a1;
 
-$tagBorder : #C4C4C4;
+$tagBorder: #C4C4C4;
 
 $breakpoints: (
-  desktop:1280px,
-  wide-desktop:1500px
+        desktop:920px,
+        wide-desktop:1500px,
+        mini-mobile:470px,
+        mobile:800px,
 );

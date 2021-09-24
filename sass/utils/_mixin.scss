@@ -9,3 +9,15 @@
 		@content;
 	}
 }
+
+@mixin mini-mobile{ //media query from desktop     @include desktop{}
+  @media screen and (min-width:map-get($breakpoints, mini-mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile{ //media query from mobile     @include desktop{}
+  @media screen and (min-width:map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
