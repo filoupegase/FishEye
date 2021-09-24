@@ -64,6 +64,9 @@
     justify-content: space-between;
     max-width: 300px;
     margin-right: 10px;
+    @include desktop {
+      padding: 15px 0 15px 0;
+    }
   }
 
   .card {
