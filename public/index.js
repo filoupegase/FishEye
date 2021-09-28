@@ -1,4 +1,4 @@
-import Photographer from "./entity/Photographer.js"
+import Photographer from "./js/entity/Photographer.js"
 
 const photographer = new Photographer();
       const cardContainer = document.getElementById('cardContainer');
