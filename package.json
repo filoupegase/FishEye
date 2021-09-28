@@ -7,7 +7,7 @@
     "lint": "eslint ./",
     "watch:sass": "sass --watch ./sass/main.scss:./public/assets/css/minifiedMain.css --style compressed",
     "compile:sass": "sass ./sass/main.scss:./public/assets/css/minifiedMain.css --style compressed",
-    "prefix:css": "postcss ./public/assets/css/minifiedMain.css --use autoprefixer -o ./public/assets/css/minifiedMain.css",
+    "prefix:css": "postcss assets/css/minifiedMain.css --use autoprefixer -o ./public/assets/css/minifiedMain.css",
     "build": "npm-run-all compile:sass prefix:css"
   },
   "repository": {
