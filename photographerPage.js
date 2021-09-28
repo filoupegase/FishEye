@@ -1,8 +1,8 @@
-import Photographer from './entity/Photographer.js';
-import Media from './entity/Media.js';
-import Mediafactory from './utils/Mediafactory.js';
-import SortBy from './component/SortBy.js';
-import FormValid from './utils/FormValid.js';
+import Photographer from './js/entity/Photographer.js';
+import Media from './js/entity/Media.js';
+import Mediafactory from './js/utils/Mediafactory.js';
+import SortBy from './js/component/SortBy.js';
+import FormValid from './js/utils/FormValid.js';
 
 const photographerId = window.location.search.split('?id=')[1];
 
