@@ -1,25 +1,28 @@
-header .tags{
-    text-align: center;
+header .tags {
+  text-align: center;
+  margin-top: 22px;
 }
 
-.tag{
-    color : $secondaryFont;
-    font-size:0.75rem;
-    font-weight: 500;
-    margin-top: 34px;
-    padding: 5px;
-    border: 0.5px solid $tagBorder;
-    border-radius : 25px;
-    display:inline-flex;
-    cursor:pointer;
-    &:hover{
-        color : white;
-        background-color : $primaryBackground;
-    }
+.tag {
+  color: $secondaryFont;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 6px;
+  padding: 5px;
+  border: 0.5px solid $tagBorder;
+  border-radius: 25px;
+  display: inline-flex;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: $primaryBackground;
+  }
 }
 
-main .tags{
-    margin-top:5px;
+main .tags {
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+
 }

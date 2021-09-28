@@ -1,81 +1,88 @@
-*{
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.5;
 }
 
-body{
-    width:auto;
-    margin:25px 25px 0 25px;
-    position : relative;
-    max-width: 1330px;
-  @include desktop{
-        display:flex;
-        flex-direction:column;
-        flex-wrap: wrap;
-    }
-}
-html{
-    font-size : 16px;
+body {
+  width: auto;
+  margin: 25px 25px 0 25px;
+  position: relative;
+  max-width: 1330px;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
-header{
-    @include desktop{
-        max-width:65%;
-        display:flex;
-        align-items: baseline;
-    }
+html {
+  font-size: 16px;
 }
 
-.logo{
-    height:35px;
-    vertical-align: bottom;
+header {
+  @include desktop {
+    max-width: 65%;
+    display: flex;
+    align-items: baseline;
+  }
 }
 
-h1{
-    color:$secondaryFont;
-    font-size:0.875rem;
-    @include desktop{
-        font-size : 2.25rem;
-    }
+.logo {
+  height: 35px;
+  vertical-align: bottom;
 }
 
-.nomore{
+h1 {
+  color: $secondaryFont;
+  font-size: 0.875rem;
+  @include desktop {
+    font-size: 2.25rem;
+  }
+}
+
+.nomore {
   max-width: 1100px;
 }
 
-.home-title{
-  height: 100px;
-  width: 250px;
+.blockcontainer {
+
+}
+
+.home-title {
+  height: 93px;
+  width: 164px;
+  font-size: 0.9em;
   margin: 0;
-  font-size: 1.5em;
   color: #901c1c;
   font-weight: 400;
   position: absolute;
-  top: -29px;
+  top: -27px;
   right: 2%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   @include desktop {
-    top: 2px;
-    font-size: 1.8em;
+    top: -10px;
+    font-size: 1.6em;
     right: 4%;
+    height: 114px;
+    width: 259px;
   }
 }
 
-.sr-only{
-    border: 0;
-    clip: rect(1px 1px 1px 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    left:-1000px;
-    width: 1px;
-    white-space: nowrap 
+.sr-only {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  left: -1000px;
+  width: 1px;
+  white-space: nowrap
 } 
