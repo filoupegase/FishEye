@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./",
-    "watch:sass": "sass --watch ./sass/main.scss:./public/assets/css/minifiedMain.css --style compressed",
-    "compile:sass": "sass ./sass/main.scss:./public/assets/css/minifiedMain.css --style compressed",
-    "prefix:css": "postcss assets/css/minifiedMain.css --use autoprefixer -o ./public/assets/css/minifiedMain.css",
+    "watch:sass": "sass --watch ./sass/main.scss:./assets/css/minifiedMain.css --style compressed",
+    "compile:sass": "sass ./sass/main.scss:./assets/css/minifiedMain.css --style compressed",
+    "prefix:css": "postcss assets/css/minifiedMain.css --use autoprefixer -o ./assets/css/minifiedMain.css",
     "build": "npm-run-all compile:sass prefix:css"
   },
   "repository": {

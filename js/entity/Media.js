@@ -1,7 +1,7 @@
 export default class Media {
 	async photographerAllMedia(photographerid) {
-		let data = await fetch('/FishEye/data/FishEyeData.json');
-		data = await data.json();
+		let data = await fetch('data/FishEyeData.json');//let data = await fetch('/FishEye/data/FishEyeData.json');
+    data = await data.json();
 		let mediaLibrary = [];
 		for (const media of data[0].media) {
 			if (media.photographerId == photographerid) {
@@ -12,7 +12,7 @@ export default class Media {
 	}
 
 	async oneMedia(id) {
-		let data = await fetch('/FishEye/data/FishEyeData.json');
+		let data = await fetch('data/FishEyeData.json');
 		data = await data.json();
 		for (const media of data[0].media) {
 			if (media.id == id) {
@@ -22,7 +22,7 @@ export default class Media {
 	}
 
 	async totalLikes(photographerid) {
-		let data = await fetch('/FishEye/data/FishEyeData.json');
+		let data = await fetch('data/FishEyeData.json');
 		data = await data.json();
 		let sum = 0;
 		for (const media of data[0].media) {
