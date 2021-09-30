@@ -111,9 +111,9 @@ function renderAllMedia(mediaList) {
     const mediaHtmlTag = mediaFactory.mediaType(media);
     mediaContainer.insertAdjacentHTML(
       'beforeend',
-      `<div id="${media.id}" style="margin-bottom: 55px; width:338px; max-width: 100%;
-                        height: 250px;" class="media ${media.tags}" role="link">
-                <figure class="mediaPreview">
+      `<div id="${media.id}" style="max-width: 300px;
+    margin: 20px 35px;" class="media ${media.tags}" role="link">
+                <figure style="max-width: 300px;" class="mediaPreview">
                     ${mediaHtmlTag}
                     <figcaption>
                         <h2 class="mediaTitle" tabindex="0">${media.title}</h2>

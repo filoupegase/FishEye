@@ -21,67 +21,70 @@
 </head>
 
 <body>
-<header>
-    <a href="index.html"> <img class="logo" src="assets/img/logo.svg"
-                               alt="Logo Fisheye - Lien vers la page d'accueil"
-                               tabindex="0"></a>
-</header>
-<main id="photograph" aria-hidden="false">
-    <section id="photographerInfo" class="card">
-    </section>
-    <button id="contact" tabindex="0">Contactez-moi</button>
-    <div id="sortByContainer">
-        <label for="sortBy">Trier par</label>
-        <div class="custom-select">
-            <select name="sortBy" id="sortBy">
-                <option value="">Popularité</option>
-                <option value="popularity">Popularité</option>
-                <option value="date">Date</option>
-                <option value="title">Titre</option>
-            </select>
-        </div>
+<div class="blockcontainer">
+    <div>
+        <a href="index.html"> <img class="logo" src="assets/img/logo.svg"
+                                   alt="Logo Fisheye - Lien vers la page d'accueil"
+                                   tabindex="0"></a>
     </div>
-    <section id="mediaContainer" class="mediaContainer">
-    </section>
-    <aside tabindex="0" aria-label="Tarif de l'artiste">
-    </aside>
-</main>
-<div id="formModal" class="form-modal" role="dialog" aria-hidden="true" aria-labelledby="contactArtist" tabindex="-1">
-    <div class="modalContainer" role="form" aria-labelledby="contactArtist">
-        <div>
-            <div class="form-header">
-                <h3 id="contactArtist">Contactez moi</h3>
-                <em id="closeModal" class="fas fa-times" role="button" aria-label="close contact form"
-                    tabindex="0"></em>
+    <main id="photograph" aria-hidden="false">
+        <section id="photographerInfo" class="card">
+        </section>
+        <button id="contact" tabindex="0">Contactez-moi</button>
+        <div id="sortByContainer">
+            <label for="sortBy">Trier par</label>
+            <div class="custom-select">
+                <select name="sortBy" id="sortBy">
+                    <option value="">Popularité</option>
+                    <option value="popularity">Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="title">Titre</option>
+                </select>
             </div>
-            <form method="post">
-                <div id="errorContainer" aria-hidden="true"
-                     aria-label="liste des erreurs lors de la soumission du formulaire">
-                    <p>Formulaire non valide<br>Liste des erreurs:</p>
-                    <ul></ul>
+        </div>
+        <section id="mediaContainer" class="mediaContainer">
+        </section>
+        <aside tabindex="0" aria-label="Tarif de l'artiste">
+        </aside>
+    </main>
+    <div id="formModal" class="form-modal" role="dialog" aria-hidden="true" aria-labelledby="contactArtist"
+         tabindex="-1">
+        <div class="modalContainer" role="form" aria-labelledby="contactArtist">
+            <div>
+                <div class="form-header">
+                    <h3 id="contactArtist">Contactez moi</h3>
+                    <em id="closeModal" class="fas fa-times" role="button" aria-label="close contact form"
+                        tabindex="0"></em>
                 </div>
-                <label for="lastname">Nom </label>
-                <input type="text" name="lastname" id="lastname" required aria-required=true>
+                <form method="post">
+                    <div id="errorContainer" aria-hidden="true"
+                         aria-label="liste des erreurs lors de la soumission du formulaire">
+                        <p>Formulaire non valide<br>Liste des erreurs:</p>
+                        <ul></ul>
+                    </div>
+                    <label for="lastname">Nom </label>
+                    <input type="text" name="lastname" id="lastname" required aria-required=true>
 
-                <label for="email">Email </label>
-                <input type="email" name="email" id="email" required aria-required=true>
+                    <label for="email">Email </label>
+                    <input type="email" name="email" id="email" required aria-required=true>
 
-                <label for="message">Votre message</label>
-                <textarea rows="5" style="margin-bottom: 20px;" name="message" id="message" required
-                          aria-required=true></textarea>
-                <input id="submit" class="button" type="submit" aria-label="Send" value="Envoyer">
-            </form>
+                    <label for="message">Votre message</label>
+                    <textarea rows="5" style="margin-bottom: 20px;" name="message" id="message" required
+                              aria-required=true></textarea>
+                    <input id="submit" class="button" type="submit" aria-label="Send" value="Envoyer">
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<div id="lightbox" class="lightbox" role="dialog" aria-label="image closeup view" aria-hidden="true">
-    <div class="container" tabindex="0">
-        <em id="previousMedia" class="fas fa-chevron-left" tabindex="0" role="button"
-            aria-label="previous image"></em>
-        <div id="lightBoxMedia">
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="image closeup view" aria-hidden="true">
+        <div class="container" tabindex="0">
+            <em id="previousMedia" class="fas fa-chevron-left" tabindex="0" role="button"
+                aria-label="previous image"></em>
+            <div id="lightBoxMedia">
+            </div>
+            <em id="nextMedia" class="fas fa-chevron-right" tabindex="0" role="button" aria-label="next image"></em>
+            <em id="closeLightbox" class="fas fa-times" tabindex="0" role="button" aria-label="close dialog"></em>
         </div>
-        <em id="nextMedia" class="fas fa-chevron-right" tabindex="0" role="button" aria-label="next image"></em>
-        <em id="closeLightbox" class="fas fa-times" tabindex="0" role="button" aria-label="close dialog"></em>
     </div>
 </div>
 </body>

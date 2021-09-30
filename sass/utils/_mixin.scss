@@ -21,3 +21,9 @@
     @content;
   }
 }
+
+@mixin moremore{ //media query from mobile     @include moremore{}
+  @media screen and (min-width:map-get($breakpoints, moremore)) {
+    @content;
+  }
+}
